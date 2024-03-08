@@ -39,5 +39,12 @@ const items = [
 // Omit the 'age' element
 
 const person = items // append your code here
+	.reduce((prev, curr) => {
+		prev[curr[0]] = curr[1]
+		prev[curr[1]] = curr[2]
+		return prev
+	}, { })
+delete person.age
+	
 
 test("Problem 4", person)
